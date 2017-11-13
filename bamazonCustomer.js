@@ -10,7 +10,7 @@ var connection = mysql.createConnection({
 
   user: "root",
 
-  password: "Trojanman2010",
+  password: "",
   database: "bamazon"
 })
 
@@ -32,7 +32,7 @@ function showProducts(){
 
           {
             type: "list",
-            name: "exit",
+            name: "quit",
             message: "Do you want to quit the program? ",
             choices:[
                 "yes",
@@ -41,7 +41,7 @@ function showProducts(){
 
         ]).then(function(data) {
 
-        if (data.exit == "yes") {
+        if (data.quit == "yes") {
           process.exit(0);
         }
         else {
